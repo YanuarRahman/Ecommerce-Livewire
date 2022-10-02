@@ -182,6 +182,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Darryldecode\Cart\CartServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -214,4 +215,5 @@ return [
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
     ])->toArray(),
     // cart
+
 ];
