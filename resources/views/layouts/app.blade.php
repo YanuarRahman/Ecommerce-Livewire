@@ -27,8 +27,8 @@
                 <a class="navbar-brand" href="{{ url('/Products') }}">
                     Products
                 </a>
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Pos
+                <a class="navbar-brand" href="{{ url('/cart') }}">
+                    POS
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

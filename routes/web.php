@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\livewire\Product;
+use App\Http\livewire\Cart;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +24,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['auth']], function () {
 
-Route::get('/products', Product::class, 'index');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/products', Product::class, 'index');
+    Route::get('/cart', Cart::class, 'index');
+});
